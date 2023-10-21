@@ -1,0 +1,3 @@
+interface ILineStrategy {
+    int doGetLine();
+}
