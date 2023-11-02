@@ -7,9 +7,13 @@ public class Line extends Sharp{
     private Point _location2 = new Point(-1,-1);
     private Point _location3 = new Point(-1,-1);
     private Point _location4 = new Point(-1,-1);
-
     private List<Point> lstPoint;
     private ILineStrategy _lineStrategy;
+
+    public void set_location1(Point _location1) {
+        this._location1 = _location1;
+    }
+
 
     Line(Point location1) {
         super(location1);
@@ -19,12 +23,14 @@ public class Line extends Sharp{
 
     Line(Point location1 ,Point location2) {
         super(location1);
+        _location1 = location1;
         _location2 = location2;
         generateLineStrategy(1);
     }
 
     Line(Point location1 ,Point location2, Point location3) {
         super(location1);
+        _location1 = location1;
         _location2 = location2;
         _location3 = location3;
         generateLineStrategy(2);
@@ -32,6 +38,7 @@ public class Line extends Sharp{
 
     Line(Point location1 ,Point location2, Point location3, Point location4) {
         super(location1);
+        _location1 = location1;
         _location2 = location2;
         _location3 = location3;
         _location4 = location4;
@@ -125,5 +132,7 @@ public class Line extends Sharp{
     public void logGetLineDetails(){
 
     }
+
+
 
 }
